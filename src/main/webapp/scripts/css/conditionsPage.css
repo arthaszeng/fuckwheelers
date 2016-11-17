@@ -1,0 +1,10 @@
+body{
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: Helvetica;
+    padding: 40px;
+}
+
+h1{
+    text-align: center;
+}

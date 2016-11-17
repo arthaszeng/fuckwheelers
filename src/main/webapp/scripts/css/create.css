@@ -1,0 +1,4 @@
+.attention:after {
+    content: '*';
+    color: red;
+}

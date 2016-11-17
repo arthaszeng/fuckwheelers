@@ -1,0 +1,46 @@
+#orderPrice {
+    display:inline-block;
+    width: 220px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#orderPrice dl {
+    overflow: hidden;
+}
+
+#orderPrice dt, #orderPrice dd {
+    float: left;
+    margin-bottom: 5px;
+}
+
+#orderPrice dt {
+    width: 85px;
+}
+
+#orderPrice dd {
+    width: calc(100% - 85px);
+    text-align: right;
+}
+
+#orderPrice dt::after {
+    float: right;
+    content: ":";
+}
+
+#orderPrice dd::before, #itemPrice::before {
+    content: "£ ";
+}
+
+#orderPrice hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#totalPrice {
+    margin-top: 5px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,66 @@
+Tech Stack
+==========
+* java 7 __needs to be installed__
+* nodejs __needs to be installed__
+* firefox __needs to be installed__
+* postgres __needs to be installed__
+* spring mvc
+* mybatis
+* gradle
+* junit4
+* selenium
+
+Get Started
+===========
+1. Start postgres server and setup database
+    * check that the freewheelers superuser exists
+      run "psql -c '\du'"
+    * if user does not exist
+        run "createuser -s freewheelers" (no need to set a password, defaults to 'postgres')
+    * create database trailblazers
+      run "./gradlew initdb"
+    * to add some data
+      run "psql -h localhost -U freewheelers --password -d trailblazers < db/backup.sql"
+
+
+2. Check out existing tasks
+    * go to the project root folder
+    * ./gradlew tasks
+
+
+3. Run local build (The first time this may take a while)
+    * ./gradlew clean build
+
+
+4. Check testing coverage
+    * open build/reports/jacoco/test/html/index.html
+
+
+5. Start the server
+    * ./gradlew jettyRun
+    * go to http://localhost:8080/
+
+
+Set Up Your IntelliJ Project
+===========
+1. Checkout the code
+2. run "./gradlew cleanIdea idea" (The first time this may take a while)
+3. Open IntelliJ IDEA
+4. Click “Open Project” -> Choose the “twuXXprojX” folder that you just checked out from source control (Or use "File" -> “Open…”)
+5. If you see a popup in which IntelliJ wants to use your confidential information in you keychain, click “Allow” or “Always Allow”
+6. If you see an error with the Java SDK being set incorrectly, follow the instructions in IntelliJ to set the Project SDK to Java 1.7
+7. To verify that the import was successful:
+	a. Make sure your database is set up and Postgres is running
+	b. Go to the project root directory, run "./gradlew jettyRun"
+	c. Run all the tests from IntelliJ
+	d. If everything is green, you are good to go!
+
+
+Set Up Remote Debugging
+===========
+1. Enable debugging and start the server
+    * export JAVA_OPTS="-Xms512M -Xmx1024M -XX:MaxPermSize=256m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -noverify"
+    * ./gradlew jettyRun
+2. In IntelliJ, click Run -> Edit Configurations.
+3. Create a new configuration + -> Remote -> "Debug FreeWheelers". Accept default settings -> Apply.
+4. Run -> Debug 'Debug FreeWheelers' 

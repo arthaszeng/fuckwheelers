@@ -1,0 +1,19 @@
+.cart-table .name {
+    width: 30%;
+}
+
+.cart-table .price {
+    width: 10%;
+}
+
+.cart-table .description {
+    width: 40%;
+}
+
+.cart-table .type {
+    width: 10%;
+}
+
+.cart-table .button {
+    width: 10%;
+}

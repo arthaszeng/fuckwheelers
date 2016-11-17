@@ -1,0 +1,23 @@
+.home-table .name-th {
+    width: 30%;
+}
+
+.home-table .price-th {
+    width: 7.5%;
+}
+
+.home-table .description-th {
+    width: 35%;
+}
+
+.home-table .type-th {
+    width: 10%;
+}
+
+.home-table .quantity-th {
+    width: 7.5%;
+}
+
+.home-table .button-th {
+    width: 10%;
+}

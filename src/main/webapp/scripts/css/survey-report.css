@@ -1,0 +1,115 @@
+.square {
+    width: 1em;
+    height: 1em;
+    margin-left: 25px;
+}
+
+.visual-block {
+    height: 80px;
+    border-left: 1px solid #FFFFFF;
+    display: inline-block;
+}
+
+.nps-example div {
+    display: inline-block;
+}
+
+.promoter {
+    background: #BAC152;
+}
+
+.detractor {
+    background: #DA4850;
+}
+
+.passive {
+    background: #F29C52;
+}
+
+.nps-summary {
+    width: 100%;
+    text-align: right;
+}
+
+.net-promoter-score {
+    display: inline-block;
+    float: left;
+}
+
+.total-response {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.net-promoter-score,
+.total-response {
+    font-size: 1.1em;
+}
+
+.net-promoter-score > span,
+.total-response > span {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.nps-percentage-visual {
+    margin: 30px 0 20px 0;
+}
+
+.nps-percentage-breakdown {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.nps-percentage-breakdown > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.survey-comments {
+    margin-left: 20px;
+}
+
+.comments-wrapper {
+    padding-top: 10px;
+    display: table;
+    position: relative;
+    width:100%;
+}
+
+.survey-comments ul {
+    margin-left: 10px;
+    list-style: none;
+    vertical-align: middle;
+}
+
+.survey-comments li {
+    padding: 5px 0 5px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.survey-comments li:last-child {
+    border: none;
+}
+
+.comments-block {
+    width: 30px;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}    
+
+@media (max-width: 600px) {
+    .total-response {
+        float: left;
+    }
+    .nps-percentage-breakdown .nps-example {
+        display: block;
+    }
+    .nps-summary div{
+        float: none;
+    }
+    .nps-summary > div {
+        display: block;
+    }
+}

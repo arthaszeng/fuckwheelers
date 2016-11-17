@@ -1,0 +1,14 @@
+*.iml
+*.ipr
+*.iws
+build
+out
+.gradle
+jetty-runner/
+.idea/
+.DS_Store
+node_modules/
+*.kdb.lock
+*.kdbx.lock
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar

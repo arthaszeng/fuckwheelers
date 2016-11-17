@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# chkconfig: 3 95 05
+# description: The FreeWheelers application is a fully fledged e-commerce platform for bicycles and accessories
+
+USER_HOME=/home/appuser
+LOG_FILE=/var/log/freewheelers.log
+ERROR_LOG_FILE=/var/log/freewheelers_error.log
+
+log_freewheelers () {
+  echo -e "[$(date +%Y-%m-%dT%H:%M:%S)] $@" >> $LOG_FILE 2>&1
+}
+
+start() {
+  log_freewheelers "starting freewheelers application"
+  chown appuser:user /var/log/freewheelers.log
+  /usr/bin/sudo -u appuser $USER_HOME/freewheelers/current_version/scripts/start-server.sh > $LOG_FILE 2> $ERROR_LOG_FILE < /dev/null
+  log_freewheelers "freewheelers application STARTED!"
+}
+
+stop () {
+  PID=$(ps aux | grep freewheelers.war | grep -v grep | awk '{ print $2 }')
+  echo "Killing process with PID [${PID}]"
+  kill -15 $PID
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

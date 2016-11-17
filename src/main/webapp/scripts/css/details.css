@@ -1,0 +1,21 @@
+#payNow{
+    background-color: lightskyblue;
+    color: white;
+    font-weight: bold;
+}
+
+#fld_expiry_month{
+    width: 30px;
+}
+
+#fld_expiry_year,#fld_csc{
+    width: 45px;
+}
+
+.paymentFields{
+    margin-bottom: 10px;
+}
+
+#credit_card_type{
+    margin-bottom: 25px;
+}

@@ -1,0 +1,27 @@
+.admin-table .user-th {
+    width: 10%;
+}
+
+.admin-table .order-th {
+    width: 20%;
+}
+
+.admin-table .order-time-th {
+    width: 20%;
+}
+
+.admin-table .status-th {
+    width: 20%;
+}
+
+.admin-table .note-th {
+    width: 20%;
+}
+
+.admin-table .button-th {
+    width: 20%;
+}
+
+.admin-table textarea {
+    width: 87%;
+}

@@ -1,0 +1,15 @@
+.user-table .name-th {
+    width: 25%;
+}
+
+.user-table .price-th {
+    width: 20%;
+}
+
+.user-table .description-th {
+    width: 45%;
+}
+
+.user-table .type-th {
+    width: 20%;
+}

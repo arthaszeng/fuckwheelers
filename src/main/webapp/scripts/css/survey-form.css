@@ -1,0 +1,89 @@
+.survey-form {
+    border: 1px #000000 solid;
+    padding: 10px;
+    margin: auto;
+    width: 70%;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.survey-form label {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.survey-form > div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.survey-form table {
+    border-collapse: collapse;
+}
+
+.survey-form td {
+    width: 40px;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.survey-form td:nth-child(even) {
+    background: #DDDDDD;
+}
+
+.survey-form textarea {
+    max-width: 100%;
+    max-height: 20px;
+    min-width: 30%;
+    min-height: 50px;
+    margin-left: 19px;
+    font-size: 15px;
+    padding: 8px 12px;
+    color: #34495e;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+}
+
+.survey-form textarea:focus {
+    outline: none;
+    border: 2px solid #DEDEDE;
+}
+
+#survey .button,
+#closeButton {
+    border: none;
+    font-weight: 400;
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+}
+
+#survey .button:hover,
+#closeButton:hover{
+    cursor: pointer;
+    background-color: #DEDEDE;
+}
+
+#survey {
+    text-align: center;
+    color: #34495e;
+}
+
+#surveyThankYou {
+    text-align: center;
+    color: #34495e;
+}
+#survey tbody input[type=radio]:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .survey-form {
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+
